@@ -12,6 +12,10 @@ h1 {
     font-family: 'Sacramento', cursive;
 }
 
+h1:hover{
+    color: #11999E;
+}
+
 h2{
     color: #66BFBF;
     font-size: 2.5rem;
@@ -47,6 +51,11 @@ hr{
     border-bottom: none;
     width: 4%;
     margin: 100px auto;
+}
+
+.heading{
+    opacity: 0;
+    animation: displayHeading 1.5s ease-in-out forwards;
 }
 
 .top-container {
@@ -87,12 +96,15 @@ hr{
     position: absolute;
     right: 300px;
     top: 40px;
+    animation: cloudMoveLeft 90s infinite;
+    
 }
 
 .bottom-cloud{
     position: absolute;
     left: 250px;
     bottom: 300px;
+    animation: cloudMoveRight 90s infinite;
 }
 
 .barbeque{
@@ -146,3 +158,37 @@ hr{
     text-decoration: none;
   }
 
+
+@keyframes cloudMoveLeft {
+    from{
+        transform: translateX(30px);
+    }
+    to{
+
+        transform: translateX(-900px);
+        
+        
+
+    }
+}
+
+@keyframes cloudMoveRight {
+    from{
+        transform: translateX(-30px);
+        
+    }
+    to{
+        transform: translateX(900px);
+        
+    }
+}
+
+@keyframes displayHeading {
+    from{
+        transform: translateX(-20px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }        
+}
