@@ -96,7 +96,7 @@ hr{
     position: absolute;
     right: 300px;
     top: 40px;
-    animation: cloudMoveLeft 90s infinite;
+    animation: cloudMoveLeft 30s ease-in infinite alternate;
     
 }
 
@@ -104,7 +104,7 @@ hr{
     position: absolute;
     left: 250px;
     bottom: 300px;
-    animation: cloudMoveRight 90s infinite;
+    animation: cloudMoveRight 30sss ease-in infinite alternate ;
 }
 
 .barbeque{
